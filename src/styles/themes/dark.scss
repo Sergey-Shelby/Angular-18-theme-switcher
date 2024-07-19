@@ -1,0 +1,104 @@
+@use "@angular/material" as mat;
+@use "./all" as themes;
+
+.dark-theme {
+  @include mat.core-color(themes.$app-dark-theme);
+  @include mat.core-typography(themes.$app-dark-theme);
+  @include mat.button-color(themes.$app-dark-theme);
+  @include mat.button-typography(themes.$app-dark-theme);
+  @include mat.icon-color(themes.$app-dark-theme);
+  @include mat.icon-typography(themes.$app-dark-theme);
+  @include mat.menu-color(themes.$app-dark-theme);
+  @include mat.menu-typography(themes.$app-dark-theme);
+
+  --mat-app-text-color: silver !important;
+  --mat-app-background-color: #18181c !important;
+  --mdc-filled-button-container-color: #bb432c !important;
+  --mdc-filled-button-label-text-color: white !important;
+  --mdc-filled-text-field-label-text-color: silver !important;
+
+  $primary-color: #222327 !important;
+  $light-button-background-color: orange !important;
+  $light-button-color: green !important;
+
+  mat-card {
+    background-color: $primary-color;
+  }
+
+  .mat-mdc-outlined-button:not(:disabled) {
+    background-color: $light-button-background-color !important;
+    color: $light-button-color !important;
+  }
+
+  .mdc-text-field__input {
+    color: white !important;
+  }
+
+  a {
+    color: #ff4d4d;
+    font-size: 14px;
+  }
+
+
+
+  $light-button-background-color: pink !important;
+  $light-button-color: #00aefa !important;
+
+
+
+  .mat-mdc-outlined-button:not(:disabled) {
+    background-color: transparent !important;
+    color: white !important;
+    border: 1px solid dimgray !important;
+  }
+
+  .mat-mdc-text-field-wrapper {
+    border: 1px solid dimgray !important;
+  }
+
+  .text-span {
+    color: silver;
+  }
+
+  .mat-elevation-z2,
+  .mat-mdc-elevation-specific.mat-elevation-z2 {
+    box-shadow: none !important;
+    background-color: #222327 !important;
+    border-bottom: 1px solid black !important;
+    border-top: 1px solid black !important;
+  }
+}
+
+.mat-datepicker-content {
+  border: 1px solid black !important;
+  background-color: #222327 !important;
+}
+
+.mat-calendar-body {
+  .mat-calendar-body-cell {
+    .mat-calendar-body-cell-content {
+      color: gray;
+    }
+  }
+
+  .mat-calendar-body-selected {
+    background-color: white;
+    color: dimgray !important;
+    border: 1px solid #f4f5f6 !important;
+  }
+
+  .mat-datepicker-content .mat-calendar-body .mat-calendar-body-selected,
+  .mat-calendar .mat-calendar-body .mat-calendar-body-selected {
+    color: dimgray !important;
+  }
+
+  .mat-calendar-body-today {
+    background-color: #222327;
+    border: 1px solid dimgray !important;
+  }
+}
+
+.cdk-overlay-pane {
+  background-color: #222327 !important;
+  border: 1px dimgray solid;
+}

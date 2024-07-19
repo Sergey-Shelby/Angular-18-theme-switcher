@@ -1,0 +1,72 @@
+:host {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 90vh;
+  }
+  
+  mat-card {
+    border-radius: 8px;
+    box-shadow: 0px 13px 35px rgba(0, 0, 0, .08) !important;
+    width: 400px;
+    padding: 5px 20px 10px 20px;
+  }
+  
+  mat-form-field {
+    width: 100%;
+  }
+  
+  form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  mat-card-actions {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .mat-mdc-card-header {
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+  
+  .example-full-width {
+    width: 100%;
+    gap: 20px;
+  }
+
+  .container-input {
+    max-height: 83px;
+    min-height: 67px;
+  }
+
+.sign-up-button {
+  width: 180px;
+}
+
+a {
+  margin-bottom: 12px;
+  text-align: end;
+}
+
+span {
+  margin-bottom: 12px;
+}
+
+.container-datepicker { 
+    margin-bottom: 10px;
+}
+
+.container-dropdown {
+    margin-bottom: 10px;
+}
+
+.sign-up-button {
+  margin-top: 5px;
+}
+
+.sign-in-button {
+  width: 180px;
+}

@@ -1,1 +1,234 @@
-/* You can add global styles to this file, and also import other style files */
+// styles.scss
+
+@use "@angular/material" as mat;
+@use "./styles/themes/all" as themes;
+@use "./styles/typography/config";
+
+@include mat.core();
+
+html {
+  @include mat.core-theme(themes.$app-light-theme);
+  @include mat.button-theme(themes.$app-light-theme);
+  @include mat.icon-theme(themes.$app-light-theme);
+  @include mat.menu-theme(themes.$app-light-theme);
+}
+
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: "Inter", sans-serif;
+}
+
+.button-rounded {
+  --mdc-protected-button-container-shape: 16px;
+}
+
+
+
+.mat-mdc-text-field-wrapper .mat-mdc-form-field-flex .mat-mdc-floating-label {
+  top: 24px !important;
+}
+
+.mat-mdc-form-field-infix {
+  height: 56px !important;
+}
+
+.mdc-line-ripple::before, .mdc-line-ripple::after {
+  display: none !important;
+}
+
+:root {
+  --mat-app-text-color: dimgray !important;
+  --mat-app-background-color: #f3f4f6 !important;
+  --mdc-filled-button-container-color: #00aefa !important;
+
+  --mdc-filled-button-container-shape: 5px !important;
+  --mdc-outlined-button-container-shape: 5px !important;
+  --mdc-outlined-button-label-text-color: white !important;
+  --mdc-filled-text-field-label-text-color: dimgray !important;
+}
+
+//input
+
+.mat-mdc-text-field-wrapper {
+  border: 1px solid #d4d6d8 !important;
+  border-radius: 5px !important;
+}
+
+.mat-mdc-form-field:not(.mat-form-field-disabled) .mat-mdc-floating-label.mdc-floating-label {
+  margin-top: 4px !important;
+}
+
+.mat-mdc-form-field:not(.mat-form-field-no-animations) .mdc-text-field__input {
+  padding-top: 12px !important;
+}
+
+.mat-mdc-form-field-subscript-wrapper {
+  display: none !important;
+}
+
+.mat-mdc-form-field-error {
+  font-size: 12px !important;
+  color: red !important;
+  height: 25px !important;
+}
+
+
+//
+
+.mat-mdc-outlined-button:not(:disabled) {
+  border: none !important;
+}
+
+.mdc-text-field__input {
+  color: black !important;
+}
+
+.mat-mdc-outlined-button .mat-mdc-button-touch-target {
+  height: 40px !important;
+}
+
+//
+
+a {
+  color: #00aefa;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.text-span {
+  color: dimgray;
+  font-size: 14px;
+}
+
+.mat-elevation-z2, .mat-mdc-elevation-specific.mat-elevation-z2 {
+  box-shadow: none !important;
+  background-color: white !important;
+  border-bottom: 1px solid #ebeced !important;
+  border-top: 1px solid #ebeced !important;
+}
+
+///
+
+.mat-mdc-form-field-has-icon-suffix .mat-mdc-text-field-wrapper {
+  height: 58px !important;
+}
+
+.mat-datepicker-content {
+  border: 1px solid #d4d6d8 !important;
+  background-color: white !important;
+}
+
+.mat-datepicker-content, .mat-calendar {
+  border-radius: 10px !important;
+}
+
+.mat-datepicker-content 
+.mat-calendar-body 
+.mat-calendar-body-cell 
+.mat-calendar-body-cell-content, 
+.mat-calendar .mat-calendar-body 
+.mat-calendar-body-cell 
+.mat-calendar-body-cell-content {
+  border-radius: 10px !important;
+}
+
+.mat-datepicker-content,
+.mat-calendar {
+  padding: 5px;
+  margin-top: 5px;
+
+.mat-calendar-body {
+  .mat-calendar-body-cell {
+  height: 30px;
+  line-height: 30px;
+
+  .mat-calendar-body-cell-content {
+      font-size: 14px;
+      color: gray;
+  }
+}
+
+.mat-calendar-body-selected {
+  background-color: silver;
+  color: dimgray !important;
+  border: 1px solid #f4f5f6 !important;
+}
+
+.mat-calendar-body-today {
+  background-color: #f4f5f6;
+  border: 1px solid #d4d6d8 !important;
+  }
+}
+}
+
+/// 
+
+
+
+.mat-mdc-option .mdc-list-item__primary-text {
+  font-size: 13px !important;
+}
+
+.mat-mdc-option.mdc-list-item--selected:not(.mdc-list-item--disabled) .mdc-list-item__primary-text {
+  color: black !important;
+}
+
+.custom-dropdown .mat-mdc-form-field-flex {
+  width: 100%;
+}  
+
+.mat-mdc-form-field-type-mat-select:not(.mat-form-field-disabled) .mat-mdc-text-field-wrapper {
+  cursor: pointer;
+  border-radius: 5px;
+  width: 100%;
+}
+
+
+
+.cdk-overlay-pane:not(.mat-mdc-select-panel-above) div.mat-mdc-select-panel {
+  margin-top: 10px !important;
+}
+
+.mdc-line-ripple::before, .mdc-line-ripple::after {
+  border: 0px !important;
+}
+
+.mat-mdc-form-field-flex .mat-mdc-form-field-infix {
+  padding-top: 15px !important;
+}
+
+.mat-mdc-option .mdc-list-item__primary-text {
+  font-size: 13px !important;
+}
+
+.mat-datepicker-content {
+    border: 1px solid #d4d6d8 !important;
+    background-color: white !important;
+}
+
+.cdk-overlay-pane {
+  background-color: #f3f4f6 !important;
+  border: 1px #d4d6d8 solid;
+  border-radius: 10px;
+  margin-top: 5px;
+}
+
+.mat-mdc-select-value {
+  margin-top: 10px !important;
+}
+
+.mat-mdc-select-panel {
+  padding: 0px !important;
+}
+
+.cdk-overlay-pane:not(.mat-mdc-select-panel-above) div.mat-mdc-select-panel {
+  margin-top: 0px !important;
+}
+
+.mat-mdc-option:focus.mdc-list-item, .mat-mdc-option.mat-mdc-option-active.mdc-list-item {
+  border-radius: 10px !important;
+}

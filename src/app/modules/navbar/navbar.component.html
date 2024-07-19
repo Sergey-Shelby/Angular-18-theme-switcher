@@ -1,0 +1,21 @@
+<nav class="navbar mat-elevation-z2">
+    <div class="navbar-left">
+      <span class="navbar-brand">Theme-Switcher</span>
+    </div>
+  
+    <div class="navbar-right">
+      <button
+      mat-icon-button
+      class="theme-toggle"
+      aria-label="Change theme"
+      (click)="changeTheme()"
+    >
+      <mat-icon>{{
+        (isDark$ | async) === true ? "dark_mode" : "light_mode"
+      }}</mat-icon>
+    </button>
+      <button mat-stroked-button class="sign-up-button" routerLink="/login">Авторизация</button>
+      <button mat-stroked-button class="sign-up-button" routerLink="/register">Регистрация</button>
+    </div>
+  </nav>
+  

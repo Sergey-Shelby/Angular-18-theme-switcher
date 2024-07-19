@@ -1,0 +1,45 @@
+// src/styles/themes/all.scss
+
+@use "sass:map";
+@use "@angular/material" as mat;
+@use "../typography/config" as config;
+
+$app-light-primary: mat.$azure-palette;
+$app-light-tertiary: mat.$blue-palette;
+$primary-color: white;
+$light-button-background-color: #e5effc;
+$light-button-color: #4287df;
+
+
+
+mat-card {
+  background-color: $primary-color;
+}
+
+.mat-mdc-outlined-button:not(:disabled) {
+  background-color: $light-button-background-color !important;
+  color: $light-button-color !important;
+}
+
+$app-light-theme: mat.define-theme(
+  (
+    color: (
+      theme-type: light,
+      primary: $app-light-primary,
+      tertiary: $app-light-tertiary,
+    ),
+    typography: config.$app-typography,
+  )
+);
+
+// Define a dark theme
+$app-dark-theme: mat.define-theme(
+  (
+    color: (
+      theme-type: dark,
+      primary: mat.$cyan-palette,
+      tertiary: mat.$orange-palette,
+    ),
+    typography: config.$app-typography,
+  )
+);
